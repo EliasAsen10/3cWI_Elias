@@ -1,16 +1,18 @@
 package at.elias.basics;
 
+
 import java.util.Scanner;
 
-public class Tictactoe {
+public class Tictactoe {public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
 
 
-    char[][] place = new char[3][3];
+    char[][] playground = new char[3][3];
+
     boolean isPlayer1Active = true;
 
 
-        do {
+    do {
         String name = isPlayer1Active ? "Player 1:" : "Player 2";
         System.out.println(name);
 
@@ -20,7 +22,7 @@ public class Tictactoe {
         int rowSelection = Integer.valueOf(selection[0]);
         int colSelection = Integer.valueOf(selection[1]);
 
-        while (!isFieldEmpty(place, rowSelection, colSelection)) {
+        while (!isFieldEmpty(playground, rowSelection, colSelection)) {
             System.out.println("Dieses Feld ist schon belegt!");
             selectionOfPlayer = scanner.next();
             selection = selectionOfPlayer.split(",");
@@ -29,15 +31,15 @@ public class Tictactoe {
         }
 
 
-        if (place[rowSelection][colSelection] == '\u0000') {
+        if (playground[rowSelection][colSelection] == '\u0000') {
             char charToPrint = '1';
             charToPrint = isPlayer1Active ? 'x' : 'o';
-            place[rowSelection][colSelection] = charToPrint;
+            playground[rowSelection][colSelection] = charToPrint;
         }
 
-        for (int row = 0; row < place.length; row++) {
-            for (int col = 0; col < place.length; col++) {
-                System.out.print("|" + place[col][row]);
+        for (int row = 0; row < playground.length; row++) {
+            for (int col = 0; col < playground.length; col++) {
+                System.out.print("|" + playground[col][row]);
 
             }
             System.out.println("|");
@@ -46,9 +48,9 @@ public class Tictactoe {
 
         isPlayer1Active = !isPlayer1Active;
 
-    } while (!hasWinner(place));
+    } while (!hasWinner(playground));
 
-        System.out.println("Finished");
+    System.out.println("Finished");
 
 }
 
@@ -90,3 +92,5 @@ public class Tictactoe {
         }
     }
 }
+
+
