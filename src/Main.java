@@ -6,7 +6,7 @@ public class Main {
 
   Car c1 = new Car();
   c1.brand = "Audi";
-  c1.fuelConsumption= 7;
+  c1.fuelConsumption= 8;
   c1.serialNumber= "A1234";
 
 
