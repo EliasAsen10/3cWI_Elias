@@ -1,52 +1,70 @@
 package at.ran.objects;
 
 public class Car {
+
+    private Engine engine;
     private String fuelConsumption;
     private String brand;
     private String serialNumber;
     private String color;
     private int fuelAmount;
 
-
-
-    public void setBrand(String brand) {
+    public Car(Engine engine,String brand, String serialNumber) {
+        this.engine=engine;
         this.brand = brand;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public void setFuelAmount(int fuelAmount) {
-        this.fuelAmount = fuelAmount;
-    }
-
-    public void setSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
     }
 
-    public void setFuelConsumption(String fuelConsumption) {
-        this.fuelConsumption = fuelConsumption;
+    public void honk(){
+        System.out.println("Ich bin ein "+  this.brand + "und habe die Serialnumber" + this.serialNumber +  "und habe" + this.getEngine().getHorsepower());
     }
 
     public String getFuelConsumption() {
         return fuelConsumption;
     }
 
-    public String getColor() {
-        return color;
+    public void setFuelConsumption(String fuelConsumption) {
+        this.fuelConsumption = fuelConsumption;
     }
 
     public String getBrand() {
         return brand;
     }
 
-    public int getFuelAmount() {
-        return fuelAmount;
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 
     public String getSerialNumber() {
         return serialNumber;
+    }
+
+    public void setSerialNumber(String serialNumber) {
+        this.serialNumber = serialNumber;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public int getFuelAmount() {
+        return fuelAmount;
+    }
+
+    public void setFuelAmount(int fuelAmount) {
+        this.fuelAmount = fuelAmount;
+    }
+
+    public Engine getEngine() {
+        return engine;
+    }
+
+    public void setEngine(Engine engine) {
+        this.engine = engine;
     }
 }
 
