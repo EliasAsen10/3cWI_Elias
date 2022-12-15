@@ -1,15 +1,13 @@
 import at.ran.objects.Car;
 import at.ran.objects.Engine;
 
-import java.lang.reflect.Type;
-
 public class Main {
  public static void main(String[] args) {
 
 
-  Engine e1 = new Engine(140, Engine.TYPE.DIESEL );
+  Engine e1 = new Engine(140, Engine.TYPE.GAS);
 
-  Car c1 = new Car("Audi", "A1234");
+  Car c1 = new Car(e1,"Audi", "A1234");
   c1.setBrand("Audi");
   c1.setFuelConsumption("20");
   c1.setSerialNumber("A1234");

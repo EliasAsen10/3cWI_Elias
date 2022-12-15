@@ -1,12 +1,12 @@
 package at.ran.objects;
 
 public class Engine {
-    public enum TYPE{DIESEL,GAS}
+    public enum TYPE{DIESEL, GAS}
     private int horsepower;
-    private String type;
+    private TYPE type;
 
 
-    public Engine(int horsepower, String type) {
+    public Engine(int horsepower, TYPE type) {
         this.horsepower = horsepower;
         this.type = type;
     }
@@ -23,11 +23,11 @@ public class Engine {
         this.horsepower = horsepower;
     }
 
-    public String getType() {
+    public TYPE getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(TYPE type) {
         this.type = type;
     }
 }
