@@ -6,12 +6,17 @@ public class Engine {
     private TYPE type;
 
 
+
     public Engine(int horsepower, TYPE type) {
         this.horsepower = horsepower;
         this.type = type;
+
     }
 
+
+
     public void drive (int amount) {
+
         System.out.println("The motor is running with" + amount);
     }
 

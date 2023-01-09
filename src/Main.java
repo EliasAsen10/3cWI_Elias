@@ -1,13 +1,20 @@
 import at.ran.objects.Car;
 import at.ran.objects.Engine;
+import at.ran.objects.rearMirror;
 
 public class Main {
  public static void main(String[] args) {
 
 
-  Engine e1 = new Engine(140, Engine.TYPE.GAS);
+  Engine e1 = new Engine(140, Engine.TYPE.DIESEL);
+
 
   Car c1 = new Car(e1,"Audi", "A1234");
+
+  rearMirror r1 = new rearMirror(0,1);
+  rearMirror r2 = new rearMirror(-20,10);
+  c1.addMirror(r1);
+  c1.addMirror(r2);
   c1.setBrand("Audi");
   c1.setFuelConsumption("20");
   c1.setSerialNumber("A1234");
@@ -15,6 +22,7 @@ public class Main {
   c1.setColor("green");
 
   System.out.println(c1.getBrand());
+  System.out.println(c1.getMirrors());
 /*
   Car c2 = new Car();
   c2.brand = "Mercedes";
