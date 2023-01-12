@@ -1,4 +1,4 @@
-package at.ran.objects;
+package OO;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,12 +13,14 @@ public class Car {
     private int fuelAmount;
 
     private List<rearMirror>mirrors;
+    private List<Wheel>wheels;
 
     public Car(Engine engine,String brand, String serialNumber) {
         this.engine=engine;
         this.brand = brand;
         this.serialNumber = serialNumber;
         this.mirrors =  new ArrayList<>();
+        this.wheels = new ArrayList<>();
 
     }
 
@@ -29,6 +31,14 @@ public class Car {
 
     public List<rearMirror> getMirrors() {
         return mirrors;
+    }
+
+    public void addWheel(Wheel wheel){
+        this.wheels.add(wheel);
+    }
+
+    public List<Wheel> getWheels(){
+        return wheels;
     }
 
     public void honk(){

@@ -1,4 +1,4 @@
-package at.ran.objects;
+package OO;
 
 public class Engine {
     public enum TYPE{DIESEL, GAS}
