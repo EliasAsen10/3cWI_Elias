@@ -1,4 +1,4 @@
-package OO;
+package OO.cars;
 
 public class Wheel {
     public enum TYPE{AUDI, MERCEDES};

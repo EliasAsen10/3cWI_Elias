@@ -1,4 +1,4 @@
-package OO;
+package OO.cars;
 
 public class Engine {
     public enum TYPE{DIESEL, GAS}

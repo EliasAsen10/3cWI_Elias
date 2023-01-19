@@ -1,7 +1,4 @@
-import OO.Car;
-import OO.Engine;
-import OO.Wheel;
-import OO.rearMirror;
+package OO.cars;
 
 public class Main {
  public static void main(String[] args) {
