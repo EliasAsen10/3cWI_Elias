@@ -7,6 +7,7 @@ public class App {
         BA.withdraw(109);
         BA.withdraw(100);
         BA.getBalance();
+        BA.deposit(999);
 
         CheckingsAccount CHA = new CheckingsAccount(100);
         CHA.deposit(100);
