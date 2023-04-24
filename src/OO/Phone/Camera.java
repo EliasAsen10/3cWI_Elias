@@ -1,10 +1,13 @@
 package OO.Phone;
 
 public class Camera {
-    private String resolution;
+
+    private int fileNumber=0;
 
 
-    public void makePicture(){
-        System.out.println("make Picture");
+    public Phonefile takePicture(){
+        Phonefile phonefile = new Phonefile(100,"pic","jpg" + fileNumber);
+        fileNumber++;
+        return phonefile;
     }
 }

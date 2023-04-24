@@ -29,8 +29,8 @@ public class Sim {
         System.out.println(id + number);
     }
 
-    public void doCall(){
-        System.out.println("ring rang rung");
+    public void doCall(String number){
+        System.out.println("Calling"+number);
     }
 
 }
