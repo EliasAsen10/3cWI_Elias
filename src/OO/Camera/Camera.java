@@ -1,14 +1,17 @@
 package OO.Camera;
 
 public class Camera {
-    private enum TYPE{klein, mittel, groß};
+    public enum TYPE {klein, mittel, groß}
+
+    private SDCard sdCard;
     private int weight;
     private String color;
 
-    private TYPE type;
+    private TYPE resolution;
 
-    public Camera(TYPE type) {
-        this.type = type;
+
+    public Camera(SDCard sdCard) {
+        this.sdCard = sdCard;
     }
 
     public Camera(int weight, String color) {
@@ -18,11 +21,11 @@ public class Camera {
     }
 
     public TYPE getType() {
-        return type;
+        return resolution;
     }
 
     public void setType(TYPE type) {
-        this.type = type;
+        this.resolution = type;
     }
 
     public int getWeight() {
@@ -39,5 +42,33 @@ public class Camera {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    public File takepicture() {
+        int size = 0;
+        if (resolution == TYPE.groß) {
+            size = 6;
+        } else if (resolution==TYPE.mittel) {
+            size = 4;
+        } else if (resolution == TYPE.klein) {
+            size = 2;
+
+        }
+
+
+
+
+
+        File file = new File("Pic01", size);
+        System.out.println("File was made" + file.getName() + " size:" + file.getSizeInMb());
+        return file;
+    }
+
+    public TYPE getResolution() {
+        return resolution;
+    }
+
+    public void setResolution(TYPE resolution) {
+        this.resolution = resolution;
     }
 }
